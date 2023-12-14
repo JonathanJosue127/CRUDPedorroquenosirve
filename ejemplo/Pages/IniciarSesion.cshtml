@@ -1,0 +1,100 @@
+﻿@page
+@model ejemplo.Pages.IniciarSesionModel
+
+@{
+    //ViewData["Title"] = "Listar";
+    // Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+
+    .div-1 {
+        background-color: #A2E6AD;
+        text-align: center;
+        /* Borde redondeado */
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        border: 1px solid #000000;
+        padding: 0 4px 0 4px;
+        /*Centrado*/
+    }
+
+    .div-2 {
+        text-align: center;
+        
+    }
+
+    .name{
+    
+        vertical-align:top ;
+    }
+
+    .img-1 {
+        text-align: center;
+        width: 250px;
+        height: 250px;
+        border: 2px solid #333;
+        text-align: center;
+        border-radius: 90px; /* Puedes ajustar el valor según tus preferencias */
+        /* Otros estilos que desees aplicar */
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid #1a1a1a; /* Marco de color azul oscuro */
+        border-radius: 5px; /* Bordes redondeados */
+        background-color: #ffffff; /* Fondo blanco */
+        color: #1a1a1a; /* Texto de color azul oscuro */
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transición suave al cambiar de color */
+    }
+
+        .button:hover,
+        .button:focus {
+            background-color: #1a1a1a; /* Cambia a fondo negro cuando se selecciona */
+            color: #ffffff; /* Cambia a texto blanco cuando se selecciona */
+            border-color: #ffffff; /* Cambia el color del marco a blanco cuando se selecciona */
+        }
+
+</style>
+
+<br/>
+<br/>
+
+<div class="card">
+    <div class="card-header">
+        Lista Contacto
+    </div>
+    <div class="card-body">
+        <a asp-action="Guardar" asp-controller="Mantenedor" class="btn btn-success"><i class="bi bi-plus-circle"></i> Crear Nuevo</a>
+        <hr />
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>IdEmpleado</th>
+                    <th>Nombre de Empleado</th>
+                    <th>Cargo</th>
+                    <th>
+
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+             
+                {
+                    <tr>
+                        <td>
+                             <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-primary btn-sm"  >Editar</a>
+                             <a asp-action="Eliminar" asp-controller="Mantenedor" class="btn btn-danger btn-sm"  >Eliminar</a>
+                        </td>
+                    </tr>
+                  }
+            </tbody>
+        </table>
+
+    </div>
+</div>

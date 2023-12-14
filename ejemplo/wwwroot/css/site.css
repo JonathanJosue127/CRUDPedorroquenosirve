@@ -1,0 +1,63 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+
+@keyframes example {
+    from {
+        background-color: red;
+    }
+
+    to {
+        background-color: yellow;
+    }
+}
+
+
+input {
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    padding: 0 4px 0 4px;
+}
+
+nav {
+    background-color: #A2E6AD;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #1a1a1a; /* Marco de color azul oscuro */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ffffff; /* Fondo blanco */
+    color: #1a1a1a; /* Texto de color azul oscuro */
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transición suave al cambiar de color */
+}
+
+    .button:hover,
+    .button:focus {
+        background-color: #1a1a1a; /* Cambia a fondo negro cuando se selecciona */
+        color: #ffffff; /* Cambia a texto blanco cuando se selecciona */
+        border-color: #ffffff; /* Cambia el color del marco a blanco cuando se selecciona */
+    }
